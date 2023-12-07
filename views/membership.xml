@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sports_club_form" model="ir.ui.view">
+        <field name="name">sports.club.form</field>
+        <field name="model">sports.sports</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="firstname"/>
+                            <field name="lastname"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="total_games_available_id"/>
+                            <field name="fees"/>
+                            <field name="email"/>
+                            <field name="mobile"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sports_club_tree" model="ir.ui.view">
+        <field name="name">sports.club.tree</field>
+        <field name="model">sports.sports</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="firstname"/>
+                <field name="lastname"/>
+                <field name="age"/>
+                <field name="total_games_available_id"/>
+                <field name="fees"/>
+                <field name="email"/>
+                <field name="mobile"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id='sports_club_actions' model='ir.actions.act_window'>
+        <field name="name">Club Member</field>
+        <field name="res_model">sports.sports</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
+

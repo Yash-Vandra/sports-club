@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="sports_club_root_menu"
+              name="Sports Club"
+              sequence="10"
+    />
+    <menuitem id="sports_club_member_menu"
+              name="Membership"
+              parent="sports_club_root_menu"
+    />
+    <menuitem id="sports_club_member_sub_menu"
+              name="Membership"
+              parent="sports_club_member_menu"
+              action="sports_club_actions"
+              sequence="10"
+    />
+
+
+</odoo>

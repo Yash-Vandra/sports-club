@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sports_club.access_sports_sports,access_sports_sports,sports_club.model_sports_sports,base.group_user,1,1,1,1
+sports_club.access_gamelist_gamelist,access_gamelist_gamelist,sports_club.model_gamelist_gamelist,base.group_user,1,1,1,1
+

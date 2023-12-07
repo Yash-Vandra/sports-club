@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sports_list_form" model="ir.ui.view">
+        <field name="name">sports.list.form</field>
+        <field name="model">gamelist.gamelist</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="gamename"/>
+                        <field name="fees"/>
+                        <field name="total_member_count"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sports_list_tree" model="ir.ui.view">
+        <field name="name">sports.list.tree</field>
+        <field name="model">gamelist.gamelist</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="gamename"/>
+                <field name="fees"/>
+                <field name="total_member_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id='sports_list_actions' model='ir.actions.act_window'>
+        <field name="name">Game Data</field>
+        <field name="res_model">gamelist.gamelist</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="sports_list_sub_menu"
+              name="Gamedata"
+              parent="sports_club_member_menu"
+              action="sports_list_actions"
+    />
+
+
+</odoo>
+
