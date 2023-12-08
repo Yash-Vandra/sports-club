@@ -7,7 +7,7 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="gamename"/>
+                        <field name="name"/>
                         <field name="fees"/>
                         <field name="total_member_count"/>
                     </group>
@@ -21,7 +21,7 @@
         <field name="model">gamelist.gamelist</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="gamename"/>
+                <field name="name"/>
                 <field name="fees"/>
                 <field name="total_member_count"/>
             </tree>

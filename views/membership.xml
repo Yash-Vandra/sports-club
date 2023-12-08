@@ -6,15 +6,31 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="headerbutton" string="Members"
+                                icon="fa-users">
+                        </button>
+                        <button class="oe_stat_button" type="object" name="applycoupon"
+                                icon="fa-angle-double-right">
+                            <div class="o_field_widget o_start_info">
+                                <span class="o_start_text">Apply</span>
+                                <span class="o_start_text"> Coupon</span>
+                            </div>
+                        </button>
+                    </div>
                     <group>
                         <group>
-                            <field name="firstname"/>
+                            <field name="name"/>
                             <field name="lastname"/>
                             <field name="age"/>
+                            <field name="memberid"/>
+                            <field name="counting_member"/>
+
                         </group>
                         <group>
                             <field name="total_games_available_id"/>
                             <field name="fees"/>
+                            <field name="month"/>
                             <field name="email"/>
                             <field name="mobile"/>
                         </group>
@@ -29,11 +45,15 @@
         <field name="model">sports.sports</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="firstname"/>
+                <field name="name"/>
                 <field name="lastname"/>
                 <field name="age"/>
+                <field name="memberid"/>
+
+                <field name="counting_member"/>
                 <field name="total_games_available_id"/>
                 <field name="fees"/>
+                <field name="month"/>
                 <field name="email"/>
                 <field name="mobile"/>
             </tree>
